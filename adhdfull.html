@@ -1,0 +1,2132 @@
+<!-- First webpage -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page One</title>
+  ...
+</head>
+<body>
+  ...
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل التغذية لاضطراب نقص الانتباه وفرط النشاط (ADHD)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/preline@3.0.1/dist/preline.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'arabic': ['Cairo', 'Amiri', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        accent: {
+                            50: '#fdf4ff',
+                            100: '#fae8ff',
+                            200: '#f5d0fe',
+                            300: '#f0abfc',
+                            400: '#e879f9',
+                            500: '#d946ef',
+                            600: '#c026d3',
+                            700: '#a21caf',
+                            800: '#86198f',
+                            900: '#701a75',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Cairo', 'Amiri', sans-serif;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .section-divider {
+            background: linear-gradient(90deg, transparent, #0ea5e9, transparent);
+            height: 2px;
+            margin: 2rem 0;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #0ea5e9 0%, #d946ef 100%);
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .dark .glass-effect {
+            background: rgba(15, 23, 42, 0.25);
+            border: 1px solid rgba(148, 163, 184, 0.18);
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-secondary-900 dark:via-secondary-800 dark:to-secondary-900 text-secondary-800 dark:text-secondary-100 transition-all duration-500">
+    
+    <!-- Theme Toggle Button -->
+    <div class="fixed top-4 left-4 z-50">
+        <button id="themeToggle" class="p-3 rounded-full bg-white dark:bg-secondary-800 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift">
+            <i class="fas fa-sun text-yellow-500 dark:hidden"></i>
+            <i class="fas fa-moon text-blue-400 hidden dark:block"></i>
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden">
+        <div class="gradient-bg py-16 px-4">
+            <div class="max-w-6xl mx-auto text-center fade-in">
+                <div class="glass-effect backdrop-blur-lg rounded-2xl p-8 mx-auto max-w-4xl">
+                    <div class="flex justify-center mb-6">
+                        <div class="p-4 bg-white/20 rounded-full">
+                            <i class="fas fa-brain text-4xl text-white"></i>
+                        </div>
+                    </div><h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                        دليل التغذية لاضطراب نقص الانتباه مع فرط النشاط
+                    </h1>
+                    <p class="text-xl text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto">
+                        مرجع شامل وعملي للأسر المصرية لإدارة أعراض ADHD من خلال التغذية المتوازنة والمدروسة علمياً
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <span class="bg-white/20 px-4 py-2 rounded-full text-white text-sm">
+                            <i class="fas fa-check-circle ml-2"></i>
+                            مستند على أبحاث علمية
+                        </span>
+                        <span class="bg-white/20 px-4 py-2 rounded-full text-white text-sm">
+                            <i class="fas fa-map-marker-alt ml-2"></i>
+                            مخصص للبيئة المصرية
+                        </span>
+                        <span class="bg-white/20 px-4 py-2 rounded-full text-white text-sm">
+                            <i class="fas fa-family ml-2"></i>
+                            دليل عملي للأسر
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-12">
+        
+        <!-- Overview Section -->
+        <section class="fade-in">
+            <div class="bg-white dark:bg-secondary-800 rounded-2xl shadow-xl hover-lift p-8">
+                <div class="flex items-center mb-6">
+                    <div class="p-3 bg-primary-100 dark:bg-primary-900 rounded-xl ml-4">
+                        <i class="fas fa-eye text-primary-600 dark:text-primary-400 text-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-secondary-800 dark:text-white">نظرة عامة</h2>
+                </div>
+                
+                <div class="prose prose-lg max-w-none text-secondary-700 dark:text-secondary-300 leading-relaxed">
+                    <p class="text-lg mb-6">
+                        يمثل هذا الدليل مرجعاً شاملاً وعملياً للأسر المصرية لإدارة أعراض اضطراب نقص الانتباه مع فرط النشاط (ADHD) من خلال التغذية. يستند الدليل إلى أبحاث علمية حديثة وآراء خبراء مصريين، ويقدم استراتيجيات غذائية متكاملة تتناسب مع الثقافة والبيئة المحلية.
+                    </p>
+                    
+                    <div class="bg-blue-50 dark:bg-blue-900/20 border-r-4 border-primary-500 p-6 rounded-lg my-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-info-circle text-primary-500 text-xl ml-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-primary-800 dark:text-primary-300 mb-2">ملاحظة مهمة</h4>
+                                <p>التغذية ليست علاجاً منفرداً للاضطراب، بل هي ركيزة أساسية داعمة للعلاجات الطبية والسلوكية المعتمدة.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADHD Understanding Section -->
+        <section class="fade-in">
+            <div class="bg-white dark:bg-secondary-800 rounded-2xl shadow-xl hover-lift p-8">
+                <div class="flex items-center mb-8">
+                    <div class="p-3 bg-purple-100 dark:bg-purple-900 rounded-xl ml-4">
+                        <i class="fas fa-brain text-purple-600 dark:text-purple-400 text-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-secondary-800 dark:text-white">فهم اضطراب نقص الانتباه مع فرط النشاط</h2>
+                </div>
+
+                <!-- ADHD Symptoms Chart -->
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 p-6 rounded-xl">
+                        <h4 class="text-xl font-semibold mb-4 text-red-800 dark:text-red-300">
+                            <i class="fas fa-exclamation-triangle ml-2"></i>
+                            الأعراض الأساسية
+                        </h4>
+                        <div class="space-y-3">
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-red-500 rounded-full ml-3 mt-2"></div>
+                                <div>
+                                    <h5 class="font-semibold text-red-700 dark:text-red-300">نقص الانتباه</h5>
+                                    <p class="text-sm text-red-600 dark:text-red-400">صعوبة التركيز، سهولة التشتت، النسيان المتكرر</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-orange-500 rounded-full ml-3 mt-2"></div>
+                                <div>
+                                    <h5 class="font-semibold text-orange-700 dark:text-orange-300">فرط النشاط</h5>
+                                    <p class="text-sm text-orange-600 dark:text-orange-400">التململ المستمر، صعوبة البقاء جالساً</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-yellow-500 rounded-full ml-3 mt-2"></div>
+                                <div>
+                                    <h5 class="font-semibold text-yellow-700 dark:text-yellow-300">الاندفاعية</h5><p class="text-sm text-yellow-600 dark:text-yellow-400">مقاطعة الآخرين، التصرف دون تفكير</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 p-6 rounded-xl">
+                        <h4 class="text-xl font-semibold mb-4 text-green-800 dark:text-green-300">
+                            <i class="fas fa-microscope ml-2"></i>
+                            الحقائق العلمية
+                        </h4>
+                        <div class="space-y-3">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 ml-3 mt-1"></i>
+                                <p class="text-sm">اضطراب نمو عصبي يبدأ في الطفولة</p>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 ml-3 mt-1"></i>
+                                <p class="text-sm">ليس بسبب سوء التربية أو الصدمات</p>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 ml-3 mt-1"></i>
+                                <p class="text-sm">خلل في النواقل العصبية بالدماغ</p>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 ml-3 mt-1"></i>
+                                <p class="text-sm">يمكن إدارته بالعلاج المناسب</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Egyptian Research Highlight -->
+                <div class="bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 border-r-4 border-yellow-500 p-6 rounded-lg">
+                    <div class="flex items-start">
+                        <i class="fas fa-star text-yellow-500 text-2xl ml-4 mt-1"></i>
+                        <div>
+                            <h4 class="text-xl font-bold text-yellow-800 dark:text-yellow-300 mb-3">دراسة مصرية رائدة</h4>
+                            <p class="text-yellow-700 dark:text-yellow-400 leading-relaxed">
+                                كشفت دراسة حالة منضبطة أجريت على أطفال مصريين أن الأطفال المصابين بـ ADHD يستهلكون كميات أعلى من الطاقة مقارنة بأقرانهم الأصحاء. ووجدت الدراسة أن انخفاض تناول المعادن والفيتامينات يرتبط بزيادة احتمالية الإصابة بالاضطراب.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nutrition Chart Section -->
+        <section class="fade-in">
+            <div class="bg-white dark:bg-secondary-800 rounded-2xl shadow-xl hover-lift p-8">
+                <div class="flex items-center mb-8">
+                    <div class="p-3 bg-green-100 dark:bg-green-900 rounded-xl ml-4">
+                        <i class="fas fa-apple-alt text-green-600 dark:text-green-400 text-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-secondary-800 dark:text-white">النظام الغذائي العلاجي</h2>
+                </div>
+
+                <!-- Beneficial Foods Table -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-6 text-green-700 dark:text-green-400">الأطعمة المفيدة (متوفرة في مصر)</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-green-100 dark:bg-green-900/50">
+                                    <th class="p-4 text-right font-semibold border border-green-200 dark:border-green-700">الفئة الغذائية</th>
+                                    <th class="p-4 text-right font-semibold border border-green-200 dark:border-green-700">الأهمية</th><th class="p-4 text-right font-semibold border border-green-200 dark:border-green-700">أمثلة من المطبخ المصري</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-green-50 dark:hover:bg-green-900/20 transition-colors"><td class="p-4 font-semibold border border-green-200 dark:border-green-700 bg-blue-50 dark:bg-blue-900/20">البروتينات</td>
+                                    <td class="p-4 border border-green-200 dark:border-green-700">ضرورية لإنتاج النواقل العصبية التي تساعد على التركيز</td><td class="p-4 border border-green-200 dark:border-green-700">البيض المسلوق، الفول المدمس، العدس، الحمص، الدجاج المشوي، الأسماك (البلطي والبوري)</td>
+                                </tr>
+                                <tr class="hover:bg-green-50 dark:hover:bg-green-900/20 transition-colors">
+                                    <td class="p-4 font-semibold border border-green-200 dark:border-green-700 bg-purple-50 dark:bg-purple-900/20">الأحماض الدهنية (أوميغا-3)</td>
+                                    <td class="p-4 border border-green-200 dark:border-green-700">تعزز الوظيفة الإدراكية وتظهر خصائص مضادة للالتهابات</td>
+                                    <td class="p-4 border border-green-200 dark:border-green-700">الماكريل والسردين، بذور الكتان، عين الجمل (الجوز)</td>
+                                </tr>
+                                <tr class="hover:bg-green-50 dark:hover:bg-green-900/20 transition-colors">
+                                    <td class="p-4 font-semibold border border-green-200 dark:border-green-700 bg-yellow-50 dark:bg-yellow-900/20">الكربوهيدرات المعقدة</td>
+                                    <td class="p-4 border border-green-200 dark:border-green-700">توفر طاقة مستقرة للدماغ وتمنع تقلبات السكر في الدم</td>
+                                    <td class="p-4 border border-green-200 dark:border-green-700">الخبز الأسمر (البلدي)، الأرز البني، الشوفان، الفريك، البطاطا الحلوة</td>
+                                </tr>
+                                <tr class="hover:bg-green-50 dark:hover:bg-green-900/20 transition-colors">
+                                    <td class="p-4 font-semibold border border-green-200 dark:border-green-700 bg-red-50 dark:bg-red-900/20">الفيتامينات والمعادن</td>
+                                    <td class="p-4 border border-green-200 dark:border-green-700">نقصها (خاصة الحديد والزنك والمغنيسيوم) يرتبط بأعراض ADHD</td>
+                                    <td class="p-4 border border-green-200 dark:border-green-700">الخضروات الورقية (السبانخ، الملوخية)، الفواكه الطازجة (الموز، التمر، البرتقال)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Daily Meal Plan -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-700 dark:text-blue-400">خطة وجبات يومية مقترحة</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        
+                        <div class="bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-900/20 dark:to-yellow-900/20 p-6 rounded-xl hover-lift">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-sun text-orange-500 text-xl ml-3"></i>
+                                <h4 class="text-xl font-semibold text-orange-700 dark:text-orange-300">الإفطار</h4>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="bg-white dark:bg-secondary-700 p-3 rounded-lg shadow-sm">
+                                    <p class="text-sm"><strong>الاقتراح الأول:</strong> طبق فول بالزيت الحار والليمون + بيضة مسلوقة + رغيف خبز أسمر</p>
+                                </div>
+                                <div class="bg-white dark:bg-secondary-700 p-3 rounded-lg shadow-sm">
+                                    <p class="text-sm"><strong>الاقتراح الثاني:</strong> كوب زبادي كامل الدسم مع قطع فاكهة وملعقة شوفان</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 p-6 rounded-xl hover-lift">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-utensils text-green-500 text-xl ml-3"></i>
+                                <h4 class="text-xl font-semibold text-green-700 dark:text-green-300">الغداء</h4>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="bg-white dark:bg-secondary-700 p-3 rounded-lg shadow-sm">
+                                    <p class="text-sm"><strong>الاقتراح الأول:</strong> سمك بلطي مشوي + 4 ملاعق أرز بني + طبق سلطة خضراء كبير</p>
+                                </div>
+                                <div class="bg-white dark:bg-secondary-700 p-3 rounded-lg shadow-sm"><p class="text-sm"><strong>الاقتراح الثاني:</strong> صدر دجاج مشوي + طبق خضار سوتيه + 3 ملاعق فريك</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 p-6 rounded-xl hover-lift">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-moon text-purple-500 text-xl ml-3"></i>
+                                <h4 class="text-xl font-semibold text-purple-700 dark:text-purple-300">العشاء</h4>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="bg-white dark:bg-secondary-700 p-3 rounded-lg shadow-sm">
+                                    <p class="text-sm"><strong>الاقتراح الأول:</strong> جبن قريش بالطماطم وزيت الزيتون + خيار</p>
+                                </div>
+                                <div class="bg-white dark:bg-secondary-700 p-3 rounded-lg shadow-sm">
+                                    <p class="text-sm"><strong>الاقتراح الثاني:</strong> شوربة عدس دافئة + شريحة خبز أسمر محمص</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Tracking Section -->
+        <section class="fade-in">
+            <div class="bg-white dark:bg-secondary-800 rounded-2xl shadow-xl hover-lift p-8">
+                <div class="flex items-center mb-8">
+                    <div class="p-3 bg-indigo-100 dark:bg-indigo-900 rounded-xl ml-4">
+                        <i class="fas fa-chart-line text-indigo-600 dark:text-indigo-400 text-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-secondary-800 dark:text-white">تتبع التقدم</h2>
+                </div>
+
+                <div class="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 p-6 rounded-xl mb-6">
+                    <h3 class="text-xl font-semibold mb-4 text-indigo-800 dark:text-indigo-300">جدول تتبع التقدم الغذائي والسلوكي</h3>
+                    <p class="text-indigo-700 dark:text-indigo-400 text-sm mb-4">استخدم هذا الجدول لتوثيق العلاقة بين الطعام وسلوك الطفل</p>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse bg-white dark:bg-secondary-800 rounded-lg shadow-sm">
+                            <thead>
+                                <tr class="bg-indigo-100 dark:bg-indigo-900/50">
+                                    <th class="p-3 text-right font-semibold border border-indigo-200 dark:border-indigo-700">التاريخ</th>
+                                    <th class="p-3 text-right font-semibold border border-indigo-200 dark:border-indigo-700">الوجبة والوقت</th><th class="p-3 text-right font-semibold border border-indigo-200 dark:border-indigo-700">السلوك الملاحظ</th>
+                                    <th class="p-3 text-right font-semibold border border-indigo-200 dark:border-indigo-700">ملاحظات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors"><td class="p-3 border border-indigo-200 dark:border-indigo-700">___/___/___</td>
+                                    <td class="p-3 border border-indigo-200 dark:border-indigo-700">الإفطار: _______</td>
+                                    <td class="p-3 border border-indigo-200 dark:border-indigo-700">
+                                        <div class="space-y-1 text-xs">
+                                            <label class="flex items-center"><input type="checkbox" class="ml-2"> هادئ ومستقر</label><label class="flex items-center"><input type="checkbox" class="ml-2"> تركيز جيد</label><label class="flex items-center"><input type="checkbox" class="ml-2"> تململ</label>
+                                            <label class="flex items-center"><input type="checkbox" class="ml-2"> اندفاعي</label>
+                                        </div>
+                                    </td>
+                                    <td class="p-3 border border-indigo-200 dark:border-indigo-700">_____________</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Foods to Avoid Section -->
+        <section class="fade-in">
+            <div class="bg-white dark:bg-secondary-800 rounded-2xl shadow-xl hover-lift p-8">
+                <div class="flex items-center mb-8">
+                    <div class="p-3 bg-red-100 dark:bg-red-900 rounded-xl ml-4">
+                        <i class="fas fa-exclamation-triangle text-red-600 dark:text-red-400 text-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-secondary-800 dark:text-white">ما يجب تجنبه</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-gradient-to-br from-red-50 to-pink-50 dark:from-red-900/20 dark:to-pink-900/20 p-6 rounded-xl">
+                        <h4 class="text-xl font-semibold mb-4 text-red-700 dark:text-red-300">
+                            <i class="fas fa-candy-cane ml-2"></i>
+                            السكريات والمواد المصنعة
+                        </h4>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-center">
+                                <i class="fas fa-times text-red-500 ml-2"></i>
+                                السكريات البسيطة والمشروبات المحلاة
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-times text-red-500 ml-2"></i>
+                                الحلوى والشوكولاتة والمشروبات الغازية
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-times text-red-500 ml-2"></i>
+                                الأطعمة المصنعة والمعلبة
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-times text-red-500 ml-2"></i>
+                                اللانشون والبرجر المصنع والنقانق
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-6 rounded-xl">
+                        <h4 class="text-xl font-semibold mb-4 text-orange-700 dark:text-orange-300">
+                            <i class="fas fa-flask ml-2"></i>
+                            المضافات والمواد الكيميائية
+                        </h4>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-center">
+                                <i class="fas fa-times text-orange-500 ml-2"></i>
+                                الألوان الغذائية الصناعية
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-times text-orange-500 ml-2"></i>
+                                المواد الحافظة الكيميائية
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-times text-orange-500 ml-2"></i>
+                                الكافيين بكميات كبيرة
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-times text-orange-500 ml-2"></i>
+                                الأطعمة المسببة للحساسية
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-yellow-50 dark:bg-yellow-900/20 border-r-4 border-yellow-500 p-4 rounded-lg">
+                    <div class="flex items-start">
+                        <i class="fas fa-lightbulb text-yellow-500 text-xl ml-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-semibold text-yellow-800 dark:text-yellow-300 mb-2">تذكر</h4>
+                            <p class="text-yellow-700 dark:text-yellow-400">تأثير هذه الأطعمة يختلف من طفل لآخر. راقب سلوك طفلك وسجل ملاحظاتك لتحديد الأطعمة التي تؤثر عليه بشكل سلبي.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expert Opinions Section -->
+        <section class="fade-in">
+            <div class="bg-white dark:bg-secondary-800 rounded-2xl shadow-xl hover-lift p-8">
+                <div class="flex items-center mb-8">
+                    <div class="p-3 bg-blue-100 dark:bg-blue-900 rounded-xl ml-4">
+                        <i class="fas fa-user-md text-blue-600 dark:text-blue-400 text-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-secondary-800 dark:text-white">صوت الخبراء في مصر</h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-xl hover-lift">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-stethoscope text-blue-600 dark:text-blue-400 text-2xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-blue-800 dark:text-blue-300">التشخيص الطبي</h4>
+                        </div>
+                        <p class="text-sm text-blue-700 dark:text-blue-400 text-center">
+                            يؤكد الأطباء النفسيون في مصر على أن التشخيص يجب أن يتم على يد طبيب نفسي متخصص من خلال تقييم شامل.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-green-50 to-teal-50 dark:from-green-900/20 dark:to-teal-900/20 p-6 rounded-xl hover-lift">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-apple-alt text-green-600 dark:text-green-400 text-2xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-green-800 dark:text-green-300">التغذية العلاجية</h4>
+                        </div>
+                        <p class="text-sm text-green-700 dark:text-green-400 text-center">
+                            تؤكد أخصائيو التغذية على العلاقة الوثيقة بين نوعية الأكل وأعراض ADHD والحاجة لنظام غذائي متوازن.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-6 rounded-xl hover-lift">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-users text-purple-600 dark:text-purple-400 text-2xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-purple-800 dark:text-purple-300">العلاج الشامل</h4>
+                        </div>
+                        <p class="text-sm text-purple-700 dark:text-purple-400 text-center">
+                            العلاج لا يقتصر على الدواء أو الغذاء، بل يشمل العلاج السلوكي المعرفي والإرشاد الأسري.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assessment Tool Section -->
+        <section class="fade-in">
+            <div class="bg-white dark:bg-secondary-800 rounded-2xl shadow-xl hover-lift p-8">
+                <div class="flex items-center mb-8">
+                    <div class="p-3 bg-teal-100 dark:bg-teal-900 rounded-xl ml-4">
+                        <i class="fas fa-clipboard-check text-teal-600 dark:text-teal-400 text-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-secondary-800 dark:text-white">أداة التقييم السلوكي</h2>
+                </div>
+
+                <div class="bg-gradient-to-r from-teal-50 to-blue-50 dark:from-teal-900/20 dark:to-blue-900/20 p-6 rounded-xl">
+                    <h3 class="text-xl font-semibold mb-4 text-teal-800 dark:text-teal-300">تقييم السلوك قبل وبعد التغيير الغذائي</h3>
+                    <p class="text-teal-700 dark:text-teal-400 text-sm mb-6">استخدم هذا الجدول لتقييم سلوك طفلك قبل البدء في النظام الغذائي المقترح، ثم أعد التقييم بعد شهر من الالتزام به.</p>
+                <div class="overflow-x-auto">
+                        <table class="w-full border-collapse bg-white dark:bg-secondary-800 rounded-lg shadow-sm">
+                            <thead>
+                                <tr class="bg-teal-100 dark:bg-teal-900/50">
+                                    <th class="p-4 text-right font-semibold border border-teal-200 dark:border-teal-700">السلوك</th>
+                                    <th class="p-4 text-center font-semibold border border-teal-200 dark:border-teal-700">قبل النظام</th>
+                                    <th class="p-4 text-center font-semibold border border-teal-200 dark:border-teal-700">بعد شهر</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-teal-50 dark:hover:bg-teal-900/20 transition-colors">
+                                    <td class="p-4 border border-teal-200 dark:border-teal-700">يجد صعوبة في الحفاظ على تركيزه في المهام أو اللعب</td>
+                                    <td class="p-4 text-center border border-teal-200 dark:border-teal-700"><input type="checkbox" class="form-checkbox"></td>
+                                    <td class="p-4 text-center border border-teal-200 dark:border-teal-700"><input type="checkbox" class="form-checkbox"></td>
+                                </tr>
+                                <tr class="hover:bg-teal-50 dark:hover:bg-teal-900/20 transition-colors">
+                                    <td class="p-4 border border-teal-200 dark:border-teal-700">يبدو كأنه لا يستمع عند التحدث إليه مباشرة</td>
+                                    <td class="p-4 text-center border border-teal-200 dark:border-teal-700"><input type="checkbox" class="form-checkbox"></td>
+                                    <td class="p-4 text-center border border-teal-200 dark:border-teal-700"><input type="checkbox" class="form-checkbox"></td>
+                                </tr>
+                                <tr class="hover:bg-teal-50 dark:hover:bg-teal-900/20 transition-colors"><td class="p-4 border border-teal-200 dark:border-teal-700">يتململ أو يتحرك كثيراً في مقعده</td>
+                                    <td class="p-4 text-center border border-teal-200 dark:border-teal-700"><input type="checkbox" class="form-checkbox"></td>
+                                    <td class="p-4 text-center border border-teal-200 dark:border-teal-700"><input type="checkbox" class="form-checkbox"></td>
+                                </tr>
+                                <tr class="hover:bg-teal-50 dark:hover:bg-teal-900/20 transition-colors">
+                                    <td class="p-4 border border-teal-200 dark:border-teal-700">يقاطع الآخرين في المحادثات أو الألعاب</td>
+                                    <td class="p-4 text-center border border-teal-200 dark:border-teal-700"><input type="checkbox" class="form-checkbox"></td>
+                                    <td class="p-4 text-center border border-teal-200 dark:border-teal-700"><input type="checkbox" class="form-checkbox"></td>
+                                </tr>
+                                <tr class="hover:bg-teal-50 dark:hover:bg-teal-900/20 transition-colors"><td class="p-4 border border-teal-200 dark:border-teal-700">يجد صعوبة في انتظار دوره</td>
+                                    <td class="p-4 text-center border border-teal-200 dark:border-teal-700"><input type="checkbox" class="form-checkbox"></td>
+                                    <td class="p-4 text-center border border-teal-200 dark:border-teal-700"><input type="checkbox" class="form-checkbox"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Note Section -->
+        <section class="fade-in">
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl shadow-xl p-8 text-center">
+                <div class="max-w-3xl mx-auto">
+                    <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-3xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-4">رسالة أخيرة للأهالي</h2>
+                    <p class="text-xl leading-relaxed mb-6">
+                        إدارة ADHD رحلة طويلة تتطلب صبراً ومثابرة. التغذية السليمة خطوة مهمة، لكنها جزء من منظومة علاجية شاملة تشمل المتابعة الطبية والدعم النفسي والتعليمي.
+                    </p>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 inline-block">
+                        <p class="text-lg font-semibold">
+                            <i class="fas fa-quote-right ml-2"></i>
+                            أطفالكم يستحقون كل الدعم والحب لتحقيق إمكاناتهم الكاملة
+                            <i class="fas fa-quote-left mr-2"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-900 text-white py-12 mt-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Author Info -->
+                <div class="text-center md:text-right">
+                    <div class="w-24 h-24 bg-gradient-to-br from-primary-400 to-purple-500 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-4">
+                        <span class="text-2xl font-bold">BA</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">BriAr</h3>
+                    <p class="text-secondary-400 text-sm">Content Creator & Developer</p>
+                </div>
+
+                <!-- Social Links -->
+                <div class="text-center">
+                    <h4 class="text-lg font-semibold mb-4">تواصل معنا</h4>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="w-12 h-12 bg-secondary-800 hover:bg-primary-600 rounded-full flex items-center justify-center transition-all duration-300 hover-lift">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-secondary-800 hover:bg-primary-600 rounded-full flex items-center justify-center transition-all duration-300 hover-lift">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-secondary-800 hover:bg-primary-600 rounded-full flex items-center justify-center transition-all duration-300 hover-lift">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-center md:text-left">
+                    <h4 class="text-lg font-semibold mb-4">معلومات قانونية</h4>
+                    <p class="text-secondary-400 text-sm mb-2">© 2025 BriAr. جميع الحقوق محفوظة.</p>
+                    <p class="text-secondary-500 text-xs leading-relaxed">
+                        هذا الدليل للأغراض التعليمية فقط ولا يغني عن استشارة طبية متخصصة.
+                    </p>
+                </div>
+
+            </div>
+            
+            <div class="section-divider opacity-30"></div>
+            
+            <div class="text-center">
+                <p class="text-secondary-400 text-sm">
+                    تم تطوير هذا الدليل بعناية فائقة لخدمة المجتمع المصري والعربي</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to system preference
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme) {
+            html.classList.toggle('dark', savedTheme === 'dark');
+        } else {
+            html.classList.toggle('dark', systemPrefersDark);
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const isDark = html.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            
+            // Add a subtle animation
+            themeToggle.style.transform = 'scale(0.9)';
+            setTimeout(() => {
+                themeToggle.style.transform = 'scale(1)';
+            }, 150);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(el);
+        });
+
+        // Enhanced hover effects
+        document.querySelectorAll('.hover-lift').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                el.style.transform = 'translateY(-4px) scale(1.02)';
+            });
+            
+            el.addEventListener('mouseleave', () => {
+                el.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Initialize Preline components
+        if (typeof HSStaticMethods !== 'undefined') {
+            HSStaticMethods.autoInit();
+        }
+    </script>
+
+</body>
+</html>
+<!-- Second webpage -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Two</title>
+  ...
+</head>
+<body>
+  ...
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الدليل العربي الشامل لإدارة اضطراب نقص الانتباه وفرط الحركة (ADHD)</title>
+  <!-- Tailwind CSS for modern design and spacing -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    html, body {
+      height: 100%;
+      min-height: 100%;
+      font-family: 'Cairo', Arial, sans-serif;
+      background: #f8f8fc;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      min-height: 100vh;
+      box-sizing: border-box;
+      /* Fair horizontal spacing */
+      padding-left: max(5vw, 24px);
+      padding-right: max(5vw, 24px);
+    }
+    header {
+      background: linear-gradient(90deg, #5b86e5 0%, #36d1c4 100%);
+      color: #fff;
+      padding: 2.5rem 0 1.5rem 0;
+      text-align: center;
+      border-bottom-left-radius: 50px 20px;
+      border-bottom-right-radius: 50px 20px;
+      box-shadow: 0 6px 24px rgba(91,134,229,0.08);
+    }
+    nav {
+      background: #fff;
+      padding: 0.5rem 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      margin-bottom: 1.5rem;
+    }
+    nav a {
+      color: #3182ce;
+      text-decoration: none;
+      margin: 0 1.5rem;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.2s;
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.5rem;
+    }
+    nav a:hover, nav a.active {
+      color: #fff;
+      background: #36d1c4;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto 2rem auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      padding: 2.5rem 2rem;
+      min-height: 70vh;
+    }
+    h2 {
+      color: #36d1c4;
+      border-right: 6px solid #5b86e5;
+      padding-right: 10px;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.5em;
+    }
+    h3 {
+      color: #5b86e5;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.15em;
+    }
+    ul, ol {
+      margin: 0 0 1rem 0;
+      padding-right: 1.5rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.2rem 0;
+      background: #f5faff;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 0.7rem;
+      text-align: right;
+      border-bottom: 1px solid #e0e9f7;
+    }
+    th {
+      background: #e3f2fd;
+      color: #1976d2;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .accordion {
+      margin: 1.5rem 0;
+    }
+    .accordion-item {
+      background: #f0f7fa;
+      border-radius: 8px;
+      margin-bottom: 0.7rem;
+      overflow: hidden;
+      box-shadow: 0 1px 6px rgba(54,209,196,0.08);
+    }
+    .accordion-title {
+      cursor: pointer;
+      padding: 1rem 1.2rem;
+      font-weight: bold;
+      color: #1976d2;
+      background: #e0f7fa;
+      transition: background 0.2s;
+      position: relative;
+      user-select: none;
+    }
+    .accordion-title::after {
+      content: '▼';
+      position: absolute;
+      left: 1.2rem;
+      font-size: 1.1em;
+      transition: transform 0.2s;
+    }
+    .accordion-title.active::after {
+      transform: rotate(180deg);
+    }
+    .accordion-content {
+      display: none;
+      padding: 1.1rem 1.2rem;
+      background: #f8f8fc;
+      color: #333;
+      border-top: 1px solid #d0e0e5;
+      animation: fadeIn 0.6s;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .tips {
+      background: #e6f8f5;
+      border-right: 5px solid #36d1c4;
+      padding: 1.2rem;
+      border-radius: 10px;
+      margin: 1.8rem 0;
+      font-size: 1.1em;
+    }
+    .tips ul {
+      margin: 0;
+      padding-right: 1rem;
+    }
+    .sources {
+      background: #f9f9f9;
+      border-right: 5px solid #5b86e5;
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1.5rem 0 0 0;
+      font-size: 0.99em;
+    }
+    .sources a {
+      color: #1976d2;
+      text-decoration: underline;
+    }
+    @media (max-width: 900px) {
+      .container {padding: 1.2rem 2vw;}
+    }
+    @media (max-width: 600px) {
+      .container {padding: 0.7rem 2vw;}
+      header h1 {font-size: 1.1em;}
+      h2 {font-size: 1.1em;}
+      nav a {font-size: 1em;}
+      table, th, td {font-size: 0.96em;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="text-2xl font-bold mb-2">الدليل العربي الشامل لإدارة اضطراب نقص الانتباه وفرط الحركة (ADHD)</h1>
+    <p class="text-lg">كل ما تحتاج معرفته لفهم، دعم، وتغذية الأطفال المصابين باضطراب ADHD</p>
+  </header>
+  <nav>
+    <a href="#about">عن الاضطراب</a>
+    <a href="#behavior">الإدارة السلوكية</a>
+    <a href="#nutrition">الإدارة التغذوية</a>
+    <a href="#studies">الدراسات والبحوث</a>
+    <a href="#tips">التوصيات</a>
+    <a href="#sources">المصادر</a>
+  </nav>
+  <div class="container">
+    <section id="about">
+      <h2>مقدمة حول اضطراب نقص الانتباه وفرط الحركة</h2>
+      <p>
+        اضطراب نقص الانتباه وفرط الحركة (ADHD) هو اضطراب عصبي سلوكي شائع في الطفولة، يؤثر على التركيز، التنظيم، والسلوك. يعاني منه نحو 5% من الأطفال عالمياً، وغالباً ما يستمر حتى البلوغ.
+      </p>
+      <table>
+        <tr>
+          <th>معدل الانتشار</th>
+          <th>التوزيع بين الجنسين</th>
+          <th>الاستمرارية</th>
+        </tr>
+        <tr>
+          <td>5% من الأطفال</td>
+          <td>6 ذكور لكل أنثى</td>
+          <td>يستمر حتى البلوغ غالباً</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="behavior">
+      <h2>الإدارة السلوكية والتربوية</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-title">استراتيجيات تعديل السلوك</div>
+          <div class="accordion-content">
+            <ul>
+              <li>تغييرات في البيئة لتسهيل تصرف الطفل بشكل جيد</li>
+              <li>تعليمات واضحة لمساعدة الطفل على فهم المطلوب</li>
+              <li>مدح السلوك الإيجابي لتشجيع الاستمرار</li>
+              <li>روتين يومي يمكن التنبؤ به</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-title">تطوير المهارات الاجتماعية</div>
+          <div class="accordion-content">
+            <ul>
+              <li>مكافأة الطفل على المشاركة واللطف</li>
+              <li>تعليم حل المشكلات مع الآخرين</li>
+              <li>تعليم التنظيم الذاتي (توقف، فكر، افعل)</li>
+              <li>فرص لممارسة المهارات الاجتماعية (مواعيد لعب)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-title">إدارة الطاقة والتركيز</div>
+          <div class="accordion-content">
+            <ul>
+              <li>استراحات منتظمة بين الأنشطة</li>
+              <li>فترات راحة بدنية أثناء التعلم</li>
+              <li>أنشطة ممتعة مثل الليجو أو الألغاز</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="nutrition">
+      <h2>الإدارة التغذوية الشاملة</h2>
+      <h3>الأطعمة التي يجب تجنبها</h3>
+      <ul>
+        <li>السكريات والحلويات</li>
+        <li>الدهون المشبعة</li>
+        <li>المشروبات الغنية بالكافيين (قهوة، شاي...)</li>
+        <li>الأطعمة المصنعة (لانشون، برجر...)</li>
+        <li>الأطعمة المقلية (بانيه، بطاطس...)</li>
+      </ul>
+      <h3>الأطعمة الموصى بها</h3>
+      <ul>
+        <li>البروتين الحيواني (لحوم، دجاج، سمك)</li>
+        <li>الأطعمة الغنية بفيتامين ب (بيض، لحوم)</li>
+        <li>منتجات الألبان (حليب، زبادي، جبن)</li>
+        <li>الأسماك (مصدر للأوميجا 3)</li>
+        <li>الخضراوات والفواكه الطازجة</li>
+        <li>الحبوب الكاملة (شوفان...)</li>
+      </ul>
+      <h3>توصيات غذائية متخصصة</h3>
+      <ul>
+        <li>نظام الطبق الواحد: وجبة متوازنة من النشويات، البروتين، الخضراوات، وسلطة خضراء</li>
+        <li>عصائر فريش مثل كيوي وأفوكادو باللبن</li>
+        <li>تجنب المقرمشات والعصائر المعلبة والشوكولاتة والبسكويت</li>
+      </ul>
+    </section>
+
+    <section id="studies">
+      <h2>الدراسات والبحوث العربية والحديثة</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-title">دراسات الانتشار والتشخيص</div>
+          <div class="accordion-content">
+            <p>
+              وفق الدليل التشخيصي DSM-5، 5% من الأطفال يعانون من ADHD، وهو أكثر شيوعاً لدى الذكور (6:1).
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-title">دراسات التدخل الغذائي</div>
+          <div class="accordion-content">
+            <p>
+              دراسة أوروبية: 63% من الأطفال انخفضت الأعراض بنسبة 40% بعد نظام غذائي قليل الأطعمة (أرز، ديك رومي، خضراوات، كمثرى، زيت زيتون...).
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-title">دراسات عربية محلية</div>
+          <div class="accordion-content">
+            <ul>
+              <li>جامعة ديالى: تشخيص 19 من 52 تلميذاً بفرط الحركة بدرجات متفاوتة.</li>
+              <li>جامعة حلوان: دراسة العلاقة بين ADHD وبعض المتغيرات الديمغرافية لدى 100 تلميذ (7-9 سنوات).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tips">
+      <h2>التوصيات العملية الشاملة</h2>
+      <div class="tips">
+        <ul>
+          <li>اتباع نظام غذائي متوازن وتجنب الأطعمة المصنعة والسكريات.</li>
+          <li>إنشاء روتين يومي منتظم للطفل.</li>
+          <li>تعزيز السلوك الإيجابي باستمرار.</li>
+          <li>توفير فترات راحة منتظمة في المدرسة والمنزل.</li>
+          <li>التعاون مع فريق متعدد التخصصات (أسرة، مدرسة، أخصائيين).</li>
+          <li>المتابعة والتقييم المستمر للتقدم.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="sources">
+      <h2>المصادر العربية الحديثة والدقيقة</h2>
+      <div class="sources">
+        <ul>
+          <li><a href="https://www.msdmanuals.com/ar/home/قضايا-صحَّة-الأطفال/اضطرابات-التعلم-والنمو/اضطراب-قلة-الانتباه-وفرط-النشاط" target="_blank">دليل MSD العربي</a></li>
+          <li><a href="https://www.medcare.ae/ar/health-library/everything-you-need-to-know-about-attention-deficit-hyperactivity-disorder-adhd.html" target="_blank">مركز ميدكير الطبي</a></li>
+          <li><a href="https://www.youm7.com/story/2024/1/11/أفضل-نظام-غذائي-لمرضى-اضطراب-فرط-الحركة-وتشتت-الانتباه/6443525" target="_blank">اليوم السابع: أفضل نظام غذائي لمرضى ADHD</a></li>
+          <li><a href="https://jperc.uobaghdad.edu.iq/index.php/jperc/article/download/1092/891/1846" target="_blank">دراسة جامعة ديالى</a></li>
+          <li><a href="https://jsu.journals.ekb.eg/article_292832_a014f1caeeadf1aa0c2784c4064102cf.pdf" target="_blank">دراسة جامعة حلوان</a></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <script>
+    // Accordion functionality
+    document.querySelectorAll('.accordion-title').forEach(function(title) {
+      title.addEventListener('click', function() {
+        this.classList.toggle('active');
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    });
+
+    // Highlight nav link on scroll
+    window.addEventListener('scroll', function() {
+      const sections = document.querySelectorAll('section[id]');
+      let scrollPos = window.scrollY || window.pageYOffset;
+      sections.forEach(section => {
+        const top = section.offsetTop - 80;
+        const bottom = top + section.offsetHeight;
+        const navLink = document.querySelector('nav a[href="#' + section.id + '"]');
+        if (scrollPos >= top && scrollPos < bottom) {
+          navLink && navLink.classList.add('active');
+        } else {
+          navLink && navLink.classList.remove('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+<!-- Second webpage -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Two</title>
+  ...
+</head>
+<body>
+  ...
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=600, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>التحكم في اضطراب فرط الحركة ونقص الانتباه: دليل التغذية المتكاملة في السياق المصري</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script defer id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+      html, body {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        color: #222;
+        line-height: 1.7;
+        width: 100vw;
+        min-height: 100vh;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+      .canvas {
+        margin-left: 0;
+      }
+      .ask-more-box {
+        display: none;
+      }
+      iframe {
+        display: block;
+        margin: 0 auto;
+      }
+      .faq-question {
+        color: black;
+        margin: 10px;
+        border-radius: 10px;
+        padding: 10px 5px 10px 15px;
+        font-size: 18px;
+        border: 2px solid #388278;
+        background: #f8f8f8;
+      }
+      .faq-answer {
+        color: black;
+        margin: 10px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        padding: 30px;
+        border: 2px solid rgba(56,130,120,0.2);
+        background: #fdfdfd;
+      }
+      .rtl-support {
+        direction: rtl !important;
+        text-align: right !important;
+      }
+      img {
+        max-width: 100% !important;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+        border-radius: 10px;
+      }
+      .rtl-support pre,
+      .rtl-support code {
+        direction: ltr !important;
+        text-align: left !important;
+      }
+      .rtl-support li {
+        padding-right: 1.5em;
+        padding-left: 0;
+      }
+      .article-date {
+        display: block;
+        text-align: center;
+        color: #aaa;
+        margin: 64px auto;
+      }
+      .article-title-background {
+        background-size: cover;
+        background-position: center;
+        padding: 40px 0 20px 0;
+        border-radius: 0 0 20px 20px;
+      }
+      .article-title-container {
+        background: rgba(26,28,31,0.7);
+        padding: 20px;
+        border-radius: 20px;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+      .table-of-contents {
+        background: rgba(255,255,255,0.1);
+        border-radius: 10px;
+        margin: 20px 0;
+        padding: 10px 0;
+      }
+      .toc-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .toc-link {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 8px 0 8px 10px;
+        transition: background 0.2s;
+      }
+      .toc-link:hover {
+        background: rgba(204,153,0,0.2);
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 20px 0;
+        background: #fafafa;
+      }
+      th, td {
+        border: 1px solid #e0e0e0;
+        padding: 8px 10px;
+        text-align: right;
+      }
+      th {
+        background: #f0f0f0;
+        color: #388278;
+      }
+      h1, h2, h3, h4 {
+        font-family: 'Segoe UI', Arial, sans-serif;
+      }
+      h2 {
+        margin-top: 40px;
+      }
+      .mermaid {
+        direction: ltr !important;
+        background: #fff;
+        border-radius: 10px;
+        margin: 30px 0;
+        overflow-x: auto;
+      }
+      /* Remove side padding and maximize content width */
+      @media (max-width: 650px) {
+        html, body {
+          max-width: 100vw;
+          padding: 0;
+        }
+        table, th, td {
+          font-size: 14px;
+        }
+        .article-title-container,
+        .table-of-contents,
+        .faq-question,
+        .faq-answer,
+        .search-results,
+        .mermaid,
+        .no-bullet-item {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          width: 100% !important;
+          box-sizing: border-box;
+        }
+      }
+      /* Desktop: remove artificial width limits and padding */
+      @media (min-width: 651px) {
+        html, body {
+          max-width: 100vw;
+          padding: 0;
+        }
+        .article-title-container,
+        .table-of-contents,
+        .faq-question,
+        .faq-answer,
+        .search-results,
+        .mermaid,
+        .no-bullet-item {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          width: 100% !important;
+          box-sizing: border-box;
+        }
+        ul[style*="padding: 30px 10%"] {
+          padding: 30px 0 !important;
+          width: 100% !important;
+        }
+      }
+</style>
+</head>
+<body>
+<div class="article-title-background" style="background-image: linear-gradient(rgba(26,28,31, 0.7), rgb(26, 28, 31) 80%), url('https://storage.googleapis.com/e-object-409003.firebasestorage.app/adhd-nutrition-management-7jt85grvf6.jpg');">
+<div class="article-title-container">
+<h1 data-in-title-background="true" style="color: #fff;">التحكم في اضطراب فرط الحركة ونقص الانتباه: دليل التغذية المتكاملة في السياق المصري</h1>
+<h3 data-in-title-background="true" style="color: #fff;">موسوعة شاملة لإدارة أعراض ADHD عبر استراتيجيات غذائية وعلاجية فعالة ومتاحة محليًا.</h3>
+<img alt="adhd-nutrition-management-7jt85grvf6" src="https://storage.googleapis.com/e-object-409003.firebasestorage.app/adhd-nutrition-management-7jt85grvf6.jpg" style="max-width:100%;height:300px;margin:50px auto 10px auto;border-radius:10px; object-fit: cover;"/>
+<div class="table-of-contents" data-in-title-background="true">
+<ol class="toc-list">
+<li><a class="toc-link" href="#heading-1"><span class="toc-number">1.</span><span class="toc-text">أبرز النقاط الرئيسية</span></a></li><li><a class="toc-link" href="#heading-2"><span class="toc-number">2.</span><span class="toc-text">مقدمة علمية مبسطة: فهم اضطراب فرط الحركة ونقص الانتباه وعلاقته بالتغذية</span></a></li><li><a class="toc-link" href="#heading-3"><span class="toc-number">3.</span><span class="toc-text">تحليل عملي مفصل للتعامل مع الأعراض المرتبطة بالتغذية</span></a></li><li><a class="toc-link" href="#heading-4"><span class="toc-number">4.</span><span class="toc-text">خطة تغذوية علاجية متكاملة</span></a></li><li><a class="toc-link" href="#heading-5"><span class="toc-number">5.</span><span class="toc-text">دليل تثقيفي عملي للأسرة ومقدمي الرعاية</span></a></li><li><a class="toc-link" href="#heading-6"><span class="toc-number">6.</span><span class="toc-text">تنبيهات غذائية وطبية مهمة</span></a></li><li><a class="toc-link" href="#heading-7"><span class="toc-number">7.</span><span class="toc-text">خاتمة</span></a></li><li><a class="toc-link" href="#heading-8"><span class="toc-number">8.</span><span class="toc-text">الأسئلة الشائعة</span></a></li><li><a class="toc-link" href="#heading-9"><span class="toc-number">9.</span><span class="toc-text">مخطط ذهني: أساسيات إدارة ADHD بالتغذية</span></a></li><li><a class="toc-link" href="#heading-10"><span class="toc-number">10.</span><span class="toc-text">استكشافات ذات صلة</span></a></li><li><a class="toc-link" href="#heading-11"><span class="toc-number">11.</span><span class="toc-text">نتائج بحث مرجعية</span></a></li></ol>
+</div>
+</div>
+</div>
+<div>
+<hr/><h2 id="heading-1" style="color: #cc9900;">أبرز النقاط الرئيسية</h2>
+<ul style="background: rgba(56,130,120,0.1);padding: 30px 10%;border-radius: 8px;width: 80%; border-left: 4px solid #388278;">
+<li><b>التغذية أساسية:</b> النظام الغذائي المتوازن يلعب دورًا حيويًا في تحسين وظائف الدماغ، وتعزيز التركيز، وتقليل فرط النشاط والاندفاعية لدى الأفراد المصابين باضطراب نقص الانتباه وفرط الحركة (ADHD).</li>
+<li><b>أطعمة تعزز الدماغ:</b> التركيز على البروتينات، أحماض أوميغا-3 الدهنية، الفيتامينات والمعادن الأساسية، والحبوب الكاملة، مع التقليل الشديد من السكريات المكررة والمضافات الصناعية.</li>
+<li><b>دعم شامل:</b> يجب أن يتكامل التدخل الغذائي مع الدعم السلوكي والنفسي، وبالتنسيق مع الفريق الطبي المختص، لضمان إدارة فعالة وشاملة لأعراض ADHD.</li>
+</ul>
+<hr/><h2 id="heading-2" style="color: #cc9900">مقدمة علمية مبسطة: فهم اضطراب فرط الحركة ونقص الانتباه وعلاقته بالتغذية</h2>
+<p>اضطراب نقص الانتباه وفرط الحركة (ADHD) هو اضطراب عصبي نمائي شائع يؤثر على الأطفال والبالغين على حد سواء. يتسم هذا الاضطراب بمجموعة من الأعراض المستمرة التي تؤثر على جودة الحياة، أبرزها صعوبة في التركيز والانتباه، فرط النشاط (الحركة المفرطة)، والاندفاعية في السلوك. يُعتقد أن ADHD ينشأ نتيجة لاختلالات في كيمياء الدماغ، وتحديدًا في مستويات النواقل العصبية مثل الدوبامين والنورإبينفرين، التي تلعب دورًا محوريًا في تنظيم المزاج، الانتباه، والتحكم في الحركة.</p>
+<p>في حين أن الأسباب الدقيقة لـ ADHD معقدة وتشمل عوامل وراثية وبيئية، تظهر الأبحاث المتزايدة أن النظام الغذائي له تأثير كبير على شدة الأعراض وطبيعة السلوكيات المرتبطة به. الغذاء الذي نستهلكه يؤثر بشكل مباشر على وظيفة الدماغ وإنتاج النواقل العصبية، وكذلك على مستويات الطاقة والالتهابات في الجسم، والتي يمكن أن تؤثر جميعها على الأعراض السلوكية والإدراكية لـ ADHD. على سبيل المثال، قد يؤدي تناول بعض الأطعمة إلى تفاقم تقلبات السكر في الدم، مما يؤدي إلى زيادة التهيج وصعوبة التركيز، بينما قد تدعم أطعمة أخرى استقرار الدماغ وتحسين الوظائف الإدراكية.</p>
+<p>في السياق المصري، حيث تتوفر مجموعة واسعة من الأطعمة الطازجة والمكونات الطبيعية، يمكن للعائلات الاستفادة من هذه الموارد لإنشاء خطة تغذوية متكاملة تدعم صحة أطفالهم المصابين بـ ADHD. الهدف هو تعزيز نظام غذائي غني بالعناصر الغذائية الأساسية التي تغذي الدماغ، وتساعد في استقرار مستويات السكر في الدم، وتقلل من الالتهابات، مما يساهم في تحسين التركيز والسلوك العام.</p>
+<img src="https://storage.googleapis.com/e-object-409003.firebasestorage.app/adhd-nutrition-management-7jt85grvf6.jpg" style="width: 100%; height: auto"/>
+<p style="text-align: center;">صورة توضيحية لأطعمة قد تقوي الذاكرة وتدعم وظائف الدماغ.</p>
+<hr/><h2 id="heading-3" style="color: #cc9900">تحليل عملي مفصل للتعامل مع الأعراض المرتبطة بالتغذية</h2>
+<p>إن فهم كيفية تأثير النظام الغذائي على أعراض ADHD أمر بالغ الأهمية لتطوير استراتيجيات تغذوية فعالة. تتجلى هذه العلاقة في عدة مظاهر:</p>
+<h3 style="color: #388278">صعوبة التركيز وتشتت الانتباه</h3>
+<p>يرتبط ضعف التركيز ونقص الانتباه غالبًا بنقص بعض العناصر الغذائية الأساسية التي تدعم وظائف الدماغ. تشمل هذه العناصر أحماض أوميغا-3 الدهنية، التي تُعد ضرورية لبناء أغشية خلايا الدماغ وتحسين التواصل العصبي. كما أن نقص بعض الفيتامينات والمعادن مثل الحديد وفيتامينات ب المركبة (خاصة ب6 وب12) يمكن أن يؤثر سلبًا على إنتاج النواقل العصبية والوظائف الإدراكية. التقلبات الحادة في مستويات السكر في الدم، الناتجة عن استهلاك السكريات المكررة والكربوهيدرات البسيطة، يمكن أن تؤدي إلى "ضبابية الدماغ" وصعوبة في الحفاظ على التركيز.</p>
+<h3 style="color: #388278">النشاط المفرط والاندفاعية</h3>
+<p>يمكن أن تتفاقم مظاهر فرط النشاط والاندفاعية بتأثير بعض المكونات الغذائية. السكريات السريعة الهضم والمواد الحافظة والألوان الصناعية التي توجد بكثرة في الأطعمة المصنعة والوجبات السريعة، قد تساهم في زيادة التهيج وتقلبات المزاج لدى الأطفال المصابين بـ ADHD. على النقيض، يساعد دمج البروتينات في الوجبات على استقرار مستويات السكر في الدم، مما يوفر طاقة مستدامة ويقلل من الهيجان والاندفاعية. المعادن مثل المغنيسيوم والكالسيوم تلعب دورًا في استرخاء الجهاز العصبي وتقليل فرط النشاط.</p>
+<h3 style="color: #388278">التفاعلات العصبية الكيميائية</h3>
+<p>تؤثر التغذية بشكل مباشر على إنتاج وتوازن النواقل العصبية في الدماغ. البروتينات توفر الأحماض الأمينية اللازمة لتصنيع الدوبامين والسيروتونين، وهما ناقلان عصبيان حيويان للتحكم في الانتباه والمزاج. أحماض أوميغا-3 الدهنية تقلل الالتهاب العصبي وتدعم المرونة العصبية، مما يحسن السلوك والانتباه. لذا، فإن النظام الغذائي الغني بهذه المكونات يمكن أن يعزز التوازن الكيميائي في الدماغ، مما يقلل من شدة أعراض ADHD.</p>
+<hr/><h2 id="heading-4" style="color: #cc9900">خطة تغذوية علاجية متكاملة</h2>
+<h3 style="color: #388278">قائمة الأطعمة المفيدة والأطعمة التي يجب الحد منها</h3>
+<h4 style="color: #7FA86E">أولاً: الأطعمة المفيدة لتحسين التركيز وتهدئة النشاط الزائد:</h4>
+<ul>
+<li><b>الأسماك الدهنية:</b> مثل السلمون، الماكريل، والسردين (متوفرة في أسواق السمك المصرية). غنية بأحماض أوميغا-3 الدهنية، الضرورية لصحة الدماغ ووظائفه الإدراكية.</li>
+<li><b>البروتينات الخالية من الدهون:</b> الدواجن (الدجاج والديك الرومي)، اللحوم الحمراء قليلة الدهن، البيض، البقوليات (الفول، العدس، الحمص)، منتجات الألبان قليلة الدسم (الزبادي، الجبن القريش). تساهم في استقرار مستويات السكر في الدم وتوفر الأحماض الأمينية اللازمة لإنتاج النواقل العصبية.</li>
+<li><b>الحبوب الكاملة:</b> خبز القمح الكامل، الأرز البني، الشوفان، الكينوا، البرغل. توفر طاقة مستدامة وتساعد في الحفاظ على مستويات سكر الدم مستقرة، مما يقلل التقلبات المزاجية والسلوكية.</li>
+<li><b>الفواكه والخضروات الطازجة:</b> خاصة الخضروات الورقية الداكنة (السبانخ، الجرجير) والفواكه الغنية بمضادات الأكسدة مثل التوتيات (الفراولة، التوت الأزرق)، التفاح، والبرتقال. توفر الفيتامينات والمعادن ومضادات الأكسدة التي تدعم صحة الدماغ والجهاز العصبي.</li>
+<li><b>البذور والمكسرات:</b> بذور الشيا، بذور الكتان، عين الجمل (الجوز)، اللوز. مصادر ممتازة لأوميغا-3، الألياف، والبروتين، وتساعد في تحسين التركيز والوظائف المعرفية.</li>
+<li><b>مصادر الكالسيوم والمغنيسيوم:</b> الزبادي، الجبن القريش، الخضروات ذات الأوراق الخضراء الداكنة. تساهم هذه المعادن في استرخاء الجهاز العصبي وتهدئة النشاط الزائد.</li>
+</ul>
+<h4 style="color: #7FA86E">ثانياً: الأطعمة التي يجب الحد منها أو تجنبها:</h4>
+<ul>
+<li><b>السكريات المكررة والحلويات:</b> العصائر المحلاة، المشروبات الغازية، الكعك، البسكويت، الشوكولاتة عالية السكر. تسبب ارتفاعًا وانخفاضًا سريعًا في سكر الدم، مما يؤدي إلى تقلبات مزاجية وزيادة في فرط النشاط.</li>
+<li><b>الكربوهيدرات المكررة:</b> الخبز الأبيض، المعكرونة البيضاء، الأرز الأبيض. تفتقر إلى الألياف وتُهضم بسرعة، مما يؤثر على استقرار سكر الدم.</li>
+<li><b>الأطعمة المصنعة والوجبات السريعة:</b> الوجبات المقلية، اللحوم المصنعة (اللانشون، البرجر المصنع). غالبًا ما تحتوي على دهون مشبعة غير صحية، مواد حافظة، وألوان صناعية قد تزيد من حدة الأعراض.</li>
+<li><b>المشروبات الغنية بالكافيين:</b> القهوة، الشاي المركز، مشروبات الطاقة (خاصة للأطفال). يمكن أن تزيد من القلق، الأرق، وفرط الحركة، وقد تتداخل مع الأدوية.</li>
+<li><b>المضافات الغذائية والألوان الصناعية:</b> يُعتقد أنها تثير أعراض فرط الحركة لدى بعض الأفراد، ويجب قراءة الملصقات الغذائية لتجنبها.</li>
+</ul>
+<img src="https://storage.googleapis.com/e-object-409003.firebasestorage.app/adhd-nutrition-management-7jt85grvf6-1.jpg" style="width: 100%; height: auto"/>
+<p style="text-align: center;">أمثلة على أطعمة قد تساعد في تقليل فرط الحركة لدى الأطفال.</p>
+<h3 style="color: #388278">جدول أسبوعي لخطة غذائية متكاملة (أمثلة من السوق المصري)</h3>
+<p>يهدف هذا الجدول إلى توفير أمثلة لوجبات متوازنة ومتكاملة، مع مراعاة المكونات المتوفرة والمحببة في السوق المصري. يُراعى أن هذا الجدول يمكن تعديله ليناسب التفضيلات الفردية والاحتياجات اليومية من السعرات الحرارية، مع التركيز على التنويع والاعتدال.</p>
+<table>
+<thead>
+<tr>
+<th>اليوم</th>
+<th>الإفطار</th>
+<th>الغداء</th>
+<th>العشاء</th>
+<th>السناكات</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>السبت</b></td>
+<td>فول بالبيض المسلوق مع خبز بلدي أسمر وطماطم وخيار</td>
+<td>سمك مشوي (بلطي أو دنيس) مع أرز بني وسلطة خضراء متنوعة</td>
+<td>صدر دجاج مشوي مع خضار سوتيه وشريحة خبز أسمر</td>
+<td>زبادي مع فاكهة، حفنة مكسرات غير مملحة</td>
+</tr>
+<tr>
+<td><b>الأحد</b></td>
+<td>شوفان بالحليب أو الزبادي مع إضافة المكسرات والفواكه المجففة</td>
+<td>لحم بقري قليل الدهن مطبوخ بالخضروات (بامية، كوسة) مع أرز</td>
+<td>سلطة تونة بالخضروات الطازجة مع خبز أسمر</td>
+<td>طبق فاكهة مقطع، كوب حليب</td>
+</tr>
+<tr>
+<td><b>الاثنين</b></td>
+<td>بيض أومليت بالخضروات (فلفل، سبانخ) مع جبن قريش وخبز أسمر</td>
+<td>سمك سردين أو ماكريل مشوي مع بطاطس مشوية وسلطة طحينة</td>
+<td>طبق عدس غني بالبروتين والخضروات، مع سلطة جانبية</td>
+<td>جزر وخيار مقطع، بذور اليقطين</td>
+</tr>
+<tr>
+<td><b>الثلاثاء</b></td>
+<td>زبادي يوناني مع جرانولا منزلية وشرائح موز</td>
+<td>حمام محشي فريك أو أرز مع طبق سلطة بلدي</td>
+<td>سلطة دجاج مشوي مع خضروات ورقية متنوعة وصلصة خفيفة</td>
+<td>بيضة مسلوقة، تمر</td>
+</tr>
+<tr>
+<td><b>الأربعاء</b></td>
+<td>جبنة قريش أو فيتا مع زيت زيتون وخبز أسمر وطماطم وزيتون</td>
+<td>طبق كشري صحي (زيادة البقوليات والخضروات)</td>
+<td>كفتة لحم مشوية أو بالفرن مع خضروات مشوية</td>
+<td>شرائح تفاح مع زبدة الفول السوداني الطبيعية</td>
+</tr>
+<tr>
+<td><b>الخميس</b></td>
+<td>بان كيك الشوفان الصحي مع فواكه طازجة وقليل من العسل</td>
+<td>أرز صيادية مع سمك مشوي وسلطة</td>
+<td>ساندويتش جبنة قريش بالزعتر وزيت زيتون مع خضروات في خبز أسمر</td>
+<td>علبة زبادي، حفنة عنب</td>
+</tr>
+<tr>
+<td><b>الجمعة</b></td>
+<td>بقايا وجبة صحية من الليلة السابقة، أو بيض مسلوق مع خبز أسمر</td>
+<td>وجبة عائلية متوازنة (لحم، دجاج، سمك) مع نشويات معقدة وسلطة</td>
+<td>شوربة خضار غنية مع قطع لحم أو دجاج، مع شريحة خبز أسمر</td>
+<td>سلطة فواكه، زبادي مع بذور الشيا</td>
+</tr>
+</tbody>
+</table>
+<h3 style="color: #388278">وصفات بسيطة محببة للأطفال</h3>
+<h4 style="color: #7FA86E">1. كرات البروتين الصحية:</h4>
+<ul>
+<li>**المكونات:** كوب دقيق شوفان، نصف كوب زبدة فول سوداني طبيعية، ربع كوب عسل نحل طبيعي، ملعقتان كبيرتان مكسرات مطحونة (لوز، جوز).</li>
+<li>**الطريقة:** اخلطي جميع المكونات جيدًا حتى تتجانس. شكليها على هيئة كرات صغيرة. يمكن حفظها في الثلاجة وتقديمها كسناك مغذي ولذيذ.</li>
+</ul>
+<h4 style="color: #7FA86E">2. سمك السردين أو البلطي المشوي مع الخضار:</h4>
+<ul>
+<li>**المكونات:** سمك سردين أو بلطي طازج، شرائح جزر، كوسة، فلفل ألوان، زيت زيتون، بهارات سمك، ليمون.</li>
+<li>**الطريقة:** تبلي السمك بالبهارات والليمون. ادهني الخضار بزيت الزيتون. اشوي السمك والخضار في الفرن أو على الشواية حتى ينضجوا. هذه الوجبة غنية بأوميغا-3 والفيتامينات، ومحببة للكثير من الأطفال.</li>
+</ul>
+<h4 style="color: #7FA86E">3. عصير الفواكه الطبيعي المنعش:</h4>
+<ul>
+<li>**المكونات:** حبة موز، حبة تفاح، نصف برتقالة، كوب ماء أو حليب قليل الدسم (بدون إضافة سكر).</li>
+<li>**الطريقة:** قشري وقطعي الفواكه، ثم اخلطيها في الخلاط مع الماء أو الحليب حتى يصبح المزيج ناعمًا. يقدم باردًا كسناك صحي يمنح الطاقة.</li>
+</ul>
+<h4 style="color: #7FA86E">4. ساندويتشات "قوة التركيز":</h4>
+<ul>
+<li>**المكونات:** خبز قمح كامل، جبنة قريش أو لبنة، شرائح خيار، شرائح طماطم، أوراق جرجير طازجة، قليل من زيت الزيتون.</li>
+<li>**الطريقة:** افردي الجبنة أو اللبنة على الخبز، ثم رصي شرائح الخضروات وأوراق الجرجير، ورشي قليلًا من زيت الزيتون. هذا الساندويتش يوفر بروتينًا وأليافًا للحفاظ على الطاقة والتركيز.</li>
+</ul>
+<hr/><h2 id="heading-5" style="color: #cc9900">دليل تثقيفي عملي للأسرة ومقدمي الرعاية</h2>
+<h3 style="color: #388278">نصائح يومية لتثبيت العادات الغذائية الصحية</h3>
+<ul>
+<li><b>القدوة الحسنة:</b> يجب أن يكون الوالدان قدوة حسنة لأطفالهم في تناول الأطعمة الصحية. عندما يرى الأطفال الكبار يتناولون طعامًا صحيًا، يصبحون أكثر ميلاً لاتباعهم.</li>
+<li><b>التدرج في التغيير:</b> لا تفرضوا تغييرات جذرية على الفور. ابدأوا بتعديلات بسيطة وتدريجية، مثل استبدال مشروب غازي بماء أو عصير طبيعي مخفف، وتقليل السكريات ببطء.</li>
+<li><b>إشراك الأطفال:</b> دعوهم يشاركون في اختيار الأطعمة الصحية من السوق، وفي غسل الخضروات، أو حتى في خلط المكونات البسيطة. هذا يزيد من اهتمامهم بالأكل الصحي.</li>
+<li><b>تحديد أوقات الوجبات:</b> حافظوا على أوقات وجبات منتظمة وثابتة. يساعد ذلك على استقرار مستويات السكر في الدم ويقلل من الحاجة إلى الوجبات الخفيفة غير الصحية.</li>
+<li><b>توفير البدائل الصحية:</b> عندما يطلب الطفل حلوى أو وجبة سريعة، قدموا له بدائل صحية وجذابة مثل قطعة فاكهة، زبادي مع عسل، أو حفنة من المكسرات.</li>
+</ul>
+<h3 style="color: #388278">طرق دمج النظام الغذائي مع خطة العلاج السلوكي والدوائي</h3>
+<p>يُعد النظام الغذائي جزءًا مكملًا وداعمًا لخطة العلاج الشاملة لـ ADHD، والتي غالبًا ما تشمل العلاج السلوكي والأدوية.</p>
+<ul>
+<li><b>التنسيق مع الفريق الطبي:</b> تحدثوا دائمًا مع طبيب الأطفال أو الأخصائي النفسي أو طبيب الأعصاب حول التغييرات الغذائية. قد يؤثر النظام الغذائي على استجابة الطفل للأدوية أو يقلل من بعض آثارها الجانبية.</li>
+<li><b>مراقبة الاستجابة:</b> احتفظوا بسجل لكيفية تفاعل الطفل مع التغييرات الغذائية. هل تحسن التركيز؟ هل قلت نوبات الغضب؟ هل زادت الهدوء؟ شاركوا هذه الملاحظات مع الفريق الطبي لتقييم فعالية الخطة.</li>
+<li><b>التزامن:</b> قد يكون من المفيد تناول بعض الوجبات الغنية بالعناصر الغذائية التي تعزز التركيز (مثل أوميغا-3) قبل الأنشطة التي تتطلب تركيزًا عاليًا أو قبل جلسات العلاج السلوكي.</li>
+<li><b>التعامل مع التداخلات:</b> إذا كان الطفل يتناول أدوية لـ ADHD، يجب استشارة الطبيب أو الصيدلي حول أي تداخلات محتملة بين الأدوية وبعض الأطعمة أو المكملات الغذائية.</li>
+</ul>
+<div style="height: 500px;"><canvas id="barCanvas"></canvas></div>
+<script id="site_chart_bar">
+        const ctxBar = document.getElementById("barCanvas");
+        const barChart = new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: ['بروتينات', 'أوميغا-3', 'فيتامينات ومعادن', 'حبوب كاملة', 'سكريات مكررة', 'مضافات صناعية'],
+                datasets: [
+                    {
+                        label: 'أهمية في النظام الغذائي لـ ADHD (من 0-10)',
+                        data: [9, 8, 7, 7, 1, 0],
+                        backgroundColor: [
+                            'rgba(60, 179, 113, 0.7)',
+                            'rgba(60, 179, 113, 0.7)',
+                            'rgba(60, 179, 113, 0.7)',
+                            'rgba(60, 179, 113, 0.7)',
+                            'rgba(255, 99, 132, 0.7)',
+                            'rgba(255, 99, 132, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgba(60, 179, 113, 1)',
+                            'rgba(60, 179, 113, 1)',
+                            'rgba(60, 179, 113, 1)',
+                            'rgba(60, 179, 113, 1)',
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(255, 99, 132, 1)'
+                        ],
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 10,
+                        ticks: {
+                            color: '#888888'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: '#888888'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#888888'
+                        }
+                    }
+                }
+            }
+        });
+        barChart.update();
+    </script>
+<p style="text-align: center;">الرسم البياني يوضح الأهمية النسبية لبعض المجموعات الغذائية في النظام الغذائي الموجه لأعراض ADHD، حيث تشير القيم الأعلى إلى الأهمية الكبرى والأقل إلى ما يجب الحد منه.</p>
+<h3 style="color: #388278">دعم الطفل نفسيًا وسلوكيًا أثناء التغيير الغذائي</h3>
+<ul>
+<li><b>التقدير والتشجيع:</b> امدحوا الطفل على جهوده والتزامه بالنظام الغذائي الصحي، حتى لو كانت هناك أخطاء بسيطة. ركزوا على الإيجابيات والإنجازات الصغيرة.</li>
+<li><b>الصبر والتفهم:</b> التغيير في العادات الغذائية قد يكون صعبًا، خاصة إذا كان الطفل معتادًا على أنماط غذائية معينة. كونوا صبورين ومتفهمين لأي مقاومة أو صعوبات يواجهها.</li>
+<li><b>تجنب العقاب:</b> لا تعاقبوا الطفل إذا أكل شيئًا غير صحي، ولا تجعلوه يشعر بالذنب. بدلاً من ذلك، ذكّروه بلطف بالأهداف الصحية.</li>
+<li><b>الاحتفال بالإنجازات:</b> احتفلوا بالنجاحات، مثل قضاء يوم كامل دون تناول السكريات المكررة أو إكمال وجبة صحية بالكامل. يمكن أن تكون المكافآت غير الغذائية (مثل وقت اللعب الإضافي، أو زيارة مكان مفضل) محفزًا قويًا.</li>
+<li><b>توضيح الفوائد:</b> اشرحوا للطفل بلغة بسيطة كيف أن الطعام الصحي يساعده على اللعب بشكل أفضل، والتركيز في المدرسة، والشعور بالقوة والسعادة.</li>
+</ul>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/wezs1SBtmxE" style="display: block; margin: 0 auto;" width="560"></iframe>
+<p style="text-align: center;">فيديو يوضح البروتوكول الغذائي لاضطراب فرط الحركة وتشتت الانتباه، ويقدم نظرة عامة على الاستراتيجيات الغذائية التي يمكن أن تساعد في إدارة الأعراض.</p>
+<hr/><h2 id="heading-6" style="color: #cc9900">تنبيهات غذائية وطبية مهمة</h2>
+<h3 style="color: #388278">الممنوعات الغذائية والتداخلات الممكنة مع الأدوية</h3>
+<p>من الضروري أن تكون الأسر على دراية بالتداخلات المحتملة بين النظام الغذائي وبعض الأدوية، خاصة تلك المستخدمة في علاج ADHD مثل الريتالين (ميثيلفينيديت) ومشتقاته.</p>
+<ul>
+<li><b>الكافيين والسكريات العالية:</b> يجب تجنب تناول الكافيين بكميات كبيرة والسكريات العالية، خاصة مع الأدوية المنشطة. هذه المواد قد تزيد من الآثار الجانبية للأدوية مثل القلق، العصبية، الأرق، وزيادة معدل ضربات القلب، وقد تتداخل مع فعالية الدواء.</li>
+<li><b>الحمضيات:</b> بعض المصادر تشير إلى أن الأطعمة والمشروبات الحمضية (مثل عصير البرتقال أو الليمون) يمكن أن تقلل من امتصاص بعض أدوية ADHD المنشطة إذا تم تناولها في نفس الوقت. يُفضل ترك فاصل زمني (ساعة على الأقل) قبل أو بعد تناول هذه الأدوية.</li>
+<li><b>المكملات الغذائية والمعادن:</b> يجب توخي الحذر عند استخدام المكملات الغذائية، والتأكد من استشارة الطبيب قبل إدخال أي منها. بعض المكملات أو المعادن (مثل الحديد والكالسيوم) قد تتداخل مع امتصاص أو فعالية الأدوية إذا تم تناولها في نفس الوقت. على سبيل المثال، قد تقلل مكملات الحديد والكالسيوم من فعالية الأدوية المنبهة.</li>
+<li><b>المضافات الصناعية:</b> الأطعمة التي تحتوي على ملونات صناعية ومواد حافظة يجب تجنبها بشكل عام، لأنها قد تزيد من حساسية البعض لهذه الأدوية أو تفاقم أعراض ADHD بشكل مستقل.</li>
+</ul>
+<h3 style="color: #388278">حالات تستدعي مراجعة طبية</h3>
+<p>الرعاية المستمرة والتواصل مع الفريق الطبي أمران حاسمان في إدارة ADHD. يجب مراجعة الطبيب في الحالات التالية:</p>
+<ul>
+<li><b>عدم تحسن الأعراض:</b> إذا لم تتحسن أعراض ADHD بشكل ملحوظ بعد الالتزام بالنظام الغذائي المقترح والخطة العلاجية لمدة 4 أسابيع أو أكثر.</li>
+<li><b>ظهور آثار جانبية جديدة:</b> أي آثار جانبية غير معتادة أو مقلقة ناتجة عن تغيير النظام الغذائي أو الأدوية (مثل فقدان الشهية الشديد، اضطرابات الجهاز الهضمي المستمرة، تغيرات في النوم أو المزاج بشكل سلبي).</li>
+<li><b>تفاقم الأعراض:</b> إذا لاحظت تفاقمًا ملحوظًا في الأعراض مثل زيادة فرط النشاط، أو تراجع القدرة على التركيز، أو ظهور نوبات غضب متكررة.</li>
+<li><b>مخاوف صحية أخرى:</b> ظهور أي مشاكل صحية جديدة أو مخاوف تتعلق بنمو الطفل، وزنه، أو حالته الغذائية العامة.</li>
+<li><b>الحساسية الغذائية:</b> في حال الشك في وجود حساسية غذائية معينة تزيد من الأعراض، يجب استشارة الطبيب أو أخصائي التغذية لإجراء الاختبارات اللازمة وتحديد الأطعمة المثيرة للحساسية.</li>
+</ul>
+<div style="height: 500px;"><canvas id="radarCanvas"></canvas></div>
+<script id="site_chart_radar">
+        const ctxRadar = document.getElementById("radarCanvas");
+        const radarChart = new Chart(ctxRadar, {
+            type: 'radar',
+            data: {
+                labels: ['التركيز', 'تهدئة النشاط', 'استقرار المزاج', 'نوم جيد', 'صحة الجهاز الهضمي'],
+                datasets: [
+                    {
+                        label: 'تأثير نظام غذائي متوازن',
+                        data: [5, 4, 4, 3, 4],
+                        fill: true,
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgb(54, 162, 235)',
+                        pointBackgroundColor: 'rgb(54, 162, 235)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgb(54, 162, 235)',
+                        tension: 0.2
+                    },
+                    {
+                        label: 'تأثير نظام غذائي غير متوازن',
+                        data: [1, 1, 1, 2, 2],
+                        fill: true,
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        pointBackgroundColor: 'rgb(255, 99, 132)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgb(255, 99, 132)',
+                        tension: 0.2
+                    }
+                ]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 5,
+                        angleLines: {
+                            color: '#888888'
+                        },
+                        grid: {
+                            color: '#888888'
+                        },
+                        pointLabels: {
+                            color: '#888888',
+                            font: {
+                                size: 14
+                            }
+                        },
+                        ticks: {
+                            backdropColor: 'rgba(0, 0, 0, 0)',
+                            color: '#888888'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#888888'
+                        }
+                    }
+                }
+            }
+        });
+        radarChart.update();
+    </script>
+<p style="text-align: center;">الرسم البياني الراداري يوضح المقارنة بين تأثير نظام غذائي متوازن وغير متوازن على جوانب مختلفة من صحة الأطفال المصابين بـ ADHD، على مقياس من 1 إلى 5.</p>
+<hr/><h2 id="heading-7" style="color: #cc9900">خاتمة</h2>
+<p>إن الإدارة التغذوية العلاجية لاضطراب نقص الانتباه وفرط الحركة (ADHD) هي نهج شامل ومتكامل يهدف إلى تحسين جودة حياة الأطفال والبالغين المتأثرين بهذا الاضطراب. من خلال تبني نظام غذائي متوازن وغني بالعناصر الغذائية الأساسية، والحد من الأطعمة المصنعة والسكريات، يمكننا دعم وظائف الدماغ، وتعزيز التركيز، وتقليل فرط النشاط والسلوك الاندفاعي. الأهم من ذلك، أن هذا النهج لا يعمل بمعزل عن التدخلات العلاجية الأخرى مثل الدعم السلوكي والدوائي. إن التعاون المستمر بين الأسرة والفريق الطبي أمر حيوي لتقييم التقدم، وتعديل الخطة العلاجية حسب الحاجة، وضمان حصول الفرد على أفضل دعم ممكن لتحقيق إمكاناته الكاملة. تذكروا دائمًا أن الصبر والمثابرة والتفهم هي مفاتيح النجاح في هذه الرحلة.</p>
+<hr/><h2 id="heading-8" style="color: #cc9900">الأسئلة الشائعة</h2>
+<div class="faq-question">هل يمكن للنظام الغذائي أن يحل محل أدوية ADHD؟</div>
+<div class="faq-answer">لا، النظام الغذائي ليس بديلاً عن الأدوية الموصوفة لـ ADHD، ولكنه يمكن أن يكون علاجًا تكميليًا قويًا يساعد في تحسين الأعراض وتقليل الحاجة لجرعات أعلى من الأدوية، كما يمكن أن يقلل من بعض الآثار الجانبية. يجب دائمًا استشارة الطبيب قبل إجراء أي تغييرات جذرية في خطة العلاج.</div>
+<div class="faq-question">ما هي أبرز الأطعمة التي يجب تجنبها تمامًا؟</div>
+<div class="faq-answer">يجب الحد من أو تجنب السكريات المكررة والحلويات، المشروبات الغازية، الأطعمة المصنعة التي تحتوي على مواد حافظة وألوان صناعية، والدهون المتحولة. هذه الأطعمة يمكن أن تزيد من فرط النشاط وتشتت الانتباه وتقلل من استقرار مستويات السكر في الدم.</div>
+<div class="faq-question">هل المكملات الغذائية ضرورية لعلاج ADHD؟</div>
+<div class="faq-answer">ليست المكملات الغذائية ضرورية لكل حالة. يمكن الحصول على معظم العناصر الغذائية الضرورية من نظام غذائي متوازن. ومع ذلك، في بعض الحالات التي يكون فيها نقص واضح في عناصر معينة (مثل أوميغا-3، الحديد، المغنيسيوم)، قد يوصي الطبيب بالمكملات. يجب دائمًا استشارة الطبيب قبل البدء بأي مكملات غذائية.</div>
+<div class="faq-question">كيف يمكنني جعل طفلي يقبل الأطعمة الصحية؟</div>
+<div class="faq-answer">ابدأوا ببطء ودمجوا الأطعمة الصحية تدريجيًا. اجعلوا الطعام الصحي ممتعًا وجذابًا من خلال تقديم ألوان وأشكال مختلفة. اسمحوا للطفل بالمشاركة في إعداد الوجبات. استخدموا التشجيع والثناء بدلاً من العقاب. يمكن أيضًا "إخفاء" بعض الخضروات في وصفات يحبها الطفل.</div>
+<div class="faq-question">ما هو الدور الذي يلعبه الماء في إدارة ADHD؟</div>
+<div class="faq-answer">الماء ضروري لوظائف الدماغ المثلى. الجفاف يمكن أن يؤدي إلى التعب، الصداع، وصعوبة التركيز، مما قد يفاقم أعراض ADHD. تأكدوا من شرب الطفل لكميات كافية من الماء على مدار اليوم.</div>
+<hr/><h2 id="heading-9" style="color: #cc9900">مخطط ذهني: أساسيات إدارة ADHD بالتغذية</h2>
+<p>يوضح هذا المخطط الذهني العلاقة المتداخلة بين التغذية والوظائف العصبية والسلوكية المرتبطة باضطراب فرط الحركة ونقص الانتباه، ويسلط الضوء على أهمية النهج الشامل.</p>
+<div class="mermaid" style="width: 100%;">
+        mindmap
+          root["إدارة ADHD بالتغذية العلاجية"]
+            الأساس العلمي["ADHD: اضطراب عصبي-نمائي<br/>اختلال النواقل العصبية (الدوبامين)<br/>تأثير النظام الغذائي على الدماغ"]
+            أهداف التغذية["تحسين التركيز<br/>تهدئة النشاط الزائد<br/>استقرار المزاج<br/>دعم صحة الدماغ"]
+              الأطعمة المفيدة["بروتينات (لحوم، بيض، بقوليات)<br/>أوميغا-3 (أسماك دهنية، بذور الشيا)<br/>حبوب كاملة (أرز بني، شوفان)<br/>فواكه وخضروات طازجة<br/>مكسرات وبذور"]
+              الأطعمة الممنوعة["سكريات مكررة (حلويات، مشروبات غازية)<br/>كربوهيدرات مكررة (خبز أبيض)<br/>أطعمة مصنعة ومقلية<br/>كافيين ومضافات صناعية"]
+            خطة عملية["جدول أسبوعي للوجبات<br/>وصفات بسيطة ومحببة<br/>أمثلة من السوق المصري"]
+            دليل للأسرة ومقدمي الرعاية["نصائح يومية (قدوة، تدرج، إشراك)<br/>دمج مع العلاج السلوكي والدوائي<br/>دعم نفسي (تقدير، صبر، فهم)"]
+            تنبيهات هامة["تداخلات مع الأدوية (الريتالين):<br/>- تجنب الكافيين والحمضيات مع الدواء<br/>- استشارة الطبيب بشأن المكملات<br/>حالات تستدعي مراجعة طبية (تفاقم الأعراض، آثار جانبية، نقص غذائي)"]
+    </div>
+<script id="site_mindmap">mermaid.initialize({ startOnLoad: true });</script>
+<hr/><h2 id="heading-10" style="color: #cc9900">استكشافات ذات صلة</h2>
+<ul style="list-style-type: none; padding: 20px; background: transparent; width: 100%; margin: -20px;">
+<li class="no-bullet-item" style="margin: 15px 0; padding: 0; display: block;">
+<a href="/?query=أثر%20النوم%20وممارسة%20الرياضة%20على%20أعراض%20ADHD" onmouseout="this.style.backgroundColor=\'#c90\'; this.style.transform=\'scale(1)\'" onmouseover="this.style.backgroundColor=\'#e0a800\'; this.style.transform=\'scale(1.02)\'" rel="noreferrer noopener nofollow" style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; text-decoration: none; color: white; background-color: #c90; border-radius: 15px; width: 100%; box-sizing: border-box; transition: all 0.2s ease;" target="_blank">
+<span>أثر النوم وممارسة الرياضة على أعراض ADHD</span>
+<i class="fas fa-arrow-right" style="color: white; margin-left: 15px; font-size: 1.2em;"></i>
+</a>
+</li>
+<li class="no-bullet-item" style="margin: 15px 0; padding: 0; display: block;">
+<a href="/?query=أهمية%20الدعم%20النفسي%20والسلوكي%20للأطفال%20المصابين%20بـ%20ADHD" onmouseout="this.style.backgroundColor=\'#c90\'; this.style.transform=\'scale(1)\'" onmouseover="this.style.backgroundColor=\'#e0a800\'; this.style.transform=\'scale(1.02)\'" rel="noreferrer noopener nofollow" style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; text-decoration: none; color: white; background-color: #c90; border-radius: 15px; width: 100%; box-sizing: border-box; transition: all 0.2s ease;" target="_blank">
+<span>أهمية الدعم النفسي والسلوكي للأطفال المصابين بـ ADHD</span>
+<i class="fas fa-arrow-right" style="color: white; margin-left: 15px; font-size: 1.2em;"></i>
+</a>
+</li>
+<li class="no-bullet-item" style="margin: 15px 0; padding: 0; display: block;">
+<a href="/?query=فهم%20دور%20النواقل%20العصبية%20في%20اضطراب%20فرط%20الحركة%20ونقص%20الانتباه" onmouseout="this.style.backgroundColor=\'#c90\'; this.style.transform=\'scale(1)\'" onmouseover="this.style.backgroundColor=\'#e0a800\'; this.style.transform=\'scale(1.02)\'" rel="noreferrer noopener nofollow" style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; text-decoration: none; color: white; background-color: #c90; border-radius: 15px; width: 100%; box-sizing: border-box; transition: all 0.2s ease;" target="_blank">
+<span>فهم دور النواقل العصبية في اضطراب فرط الحركة ونقص الانتباه</span>
+<i class="fas fa-arrow-right" style="color: white; margin-left: 15px; font-size: 1.2em;"></i>
+</a>
+</li>
+<li class="no-bullet-item" style="margin: 15px 0; padding: 0; display: block;">
+<a href="/?query=استراتيجيات%20إدارة%20الضغط%20النفسي%20للأسر%20التي%20لديها%20أطفال%20مصابون%20بـ%20ADHD" onmouseout="this.style.backgroundColor=\'#c90\'; this.style.transform=\'scale(1)\'" onmouseover="this.style.backgroundColor=\'#e0a800\'; this.style.transform=\'scale(1.02)\'" rel="noreferrer noopener nofollow" style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; text-decoration: none; color: white; background-color: #c90; border-radius: 15px; width: 100%; box-sizing: border-box; transition: all 0.2s ease;" target="_blank">
+<span>استراتيجيات إدارة الضغط النفسي للأسر التي لديها أطفال مصابون بـ ADHD</span>
+<i class="fas fa-arrow-right" style="color: white; margin-left: 15px; font-size: 1.2em;"></i>
+</a>
+</li>
+</ul>
+<hr/><h2 id="heading-11" style="color: #cc9900">نتائج بحث مرجعية</h2>
+<div class="search-results" style="margin: 30px 0; width: 100%;">
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://medicalnewstoday.com" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">medicalnewstoday.com</span>
+</div>
+<a class="search-result-description" href="https://www.medicalnewstoday.com/articles/325352" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    ADHD Diet: Best foods, foods to avoid, and meal plans - Medical News Today
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://amfmtreatment.com" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">amfmtreatment.com</span>
+</div>
+<a class="search-result-description" href="https://amfmtreatment.com/blog/nutrition-adhd-diet-tips-for-adults-children/" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    Nutrition &amp; ADHD: Diet Tips for Adults &amp; Children - AMFM Treatment
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://verywellhealth.com" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">verywellhealth.com</span>
+</div>
+<a class="search-result-description" href="https://www.verywellhealth.com/adhd-diet-5206146" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    The Best ADHD Diets and Foods for ADHD - Verywell Health
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://damorementalhealth.com" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">damorementalhealth.com</span>
+</div>
+<a class="search-result-description" href="https://damorementalhealth.com/adhd-and-diet/" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    ADHD and Diet: How Nutrition Can Help ADHD Symptoms - D'Amore Mental Health
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://foodforthebrain.org" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">foodforthebrain.org</span>
+</div>
+<a class="search-result-description" href="https://foodforthebrain.org/adhd/" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    ADHD Diet | Food for the Brain Foundation
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://youm7.com" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">youm7.com</span>
+</div>
+<a class="search-result-description" href="https://www.youm7.com/story/2024/1/5/%D8%A3%D8%B7%D8%B9%D9%85%D8%A9-%D9%88%D9%85%D9%83%D9%85%D9%84%D8%A7%D8%AA-%D8%BA%D8%B0%D8%A7%D8%A6%D9%8A%D8%A9-%D8%AA%D9%82%D9%84%D9%84-%D8%A3%D8%B9%D8%B1%D8%A7%D9%81-%D9%81%D8%B1%D8%B7-%D8%A7%D9%84%D8%AD%D8%B1%D9%83%D8%A9-%D9%88%D8%A7%D9%84%D8%AA%D8%B4%D8%AA%D8%AA-%D8%B9%D9%86%D8%AF-%D8%A7%D9%84%D9%83%D8%A8%D8%A7%D8%B1/6436587" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    أطعمة ومكملات غذائية تقلل أعراض فرط الحركة وتشتت الانتباه عند الأطفال - اليوم السابع
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://labayh.net" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">labayh.net</span>
+</div>
+<a class="search-result-description" href="https://labayh.net/ar/diets-treatment-hyperactivity-distraction/" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    ما هي الأنظمة الغذائية التي تساعد في علاج فرط الحركة وتشتت الانتباه؟ - labayh.net
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://ar.wikipedia.org" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">ar.wikipedia.org</span>
+</div>
+<a class="search-result-description" href="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%86%D8%B8%D8%A7%D9%85_%D8%A7%D9%84%D8%BA%D8%B0%D8%A7%D8%A6%D9%8A_%D9%88%D8%A7%D8%B6%D8%B7%D8%B1%D8%A7%D8%A8_%D9%86%D9%82%D8%B5_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%A8%D8%A7%D9%87_%D9%85%D8%B9_%D9%81%D8%B1%D8%B7_%D8%A7%D9%84%D9%86%D8%B4%D8%A7%D8%B7" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    النظام الغذائي واضطراب نقص الانتباه مع فرط النشاط - ويكيبيديا
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://youm7.com" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">youm7.com</span>
+</div>
+<a class="search-result-description" href="https://www.youm7.com/story/2021/11/23/6-%D8%A3%D8%B7%D8%B9%D9%85%D8%A9-%D8%AA%D8%B2%D9%8A%D8%AF-%D8%A3%D8%B9%D8%B1%D8%A7%D8%B6-%D9%81%D8%B1%D8%B7-%D8%A7%D9%84%D8%AD%D8%B1%D9%83%D8%A9-%D9%88%D9%86%D9%82%D8%B5-%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%A8%D8%A7%D9%87-%D8%B9%D9%86%D8%AF-%D8%A7%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84/5548072" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    6 أطعمة تزيد أعراض فرط الحركة ونقص الانتباه عند الأطفال - اليوم السابع
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://abbeyneuropsychologyclinic.com" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">abbeyneuropsychologyclinic.com</span>
+</div>
+<a class="search-result-description" href="https://www.abbeyneuropsychologyclinic.com/the-role-of-nutrition-in-adhd-management/" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    The Role of Nutrition in ADHD Management
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://egypttelegraph.com" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">egypttelegraph.com</span>
+</div>
+<a class="search-result-description" href="https://www.egypttelegraph.com/article/69876/%D8%AA%D9%86%D8%B3%D9%8A%D9%82-%D9%83%D9%84%D9%8A%D8%A9-%D8%A7%D9%84%D8%AA%D8%BA%D8%B2%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D8%AC%D9%8A%D8%A9-%D8%A8%D8%AC%D8%A7%D9%85%D8%B9%D8%A9-%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9-%D9%88%D9%85%D8%AF%D8%A9" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    تنسيق كلية التغذية العلاجية بجامعة القاهرة ومدة الدراسة - تليجراف مصر
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://altibbi.com" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">altibbi.com</span>
+</div>
+<a class="search-result-description" href="https://altibbi.com/%D8%A7%D9%84%D8%A7%D8%AF%D9%88%D9%8A%D8%A9/%D8%AF%D9%8A%D9%83%D8%B3%D9%85%D9%8A%D8%AB%D9%8A%D9%84-%D9%81%D9%8A%D9%86%D9%8A%D8%AF%D8%A7%D8%AA-%D8%B9%D9%84%D9%85%D9%8A" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    ديكسميثيل فينيدات، Dexmethylphenidate، لعلاج ADHD | الطبي | الطبي
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://eg.doctoruna.com" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">eg.doctoruna.com</span>
+</div>
+<a class="search-result-description" href="https://eg.doctoruna.com/en/cairo/adhd-asd" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    دكتور ADHD /ASD فيالقاهرة, مصر
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://jackiesilvernutrition.com" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">jackiesilvernutrition.com</span>
+</div>
+<a class="search-result-description" href="https://jackiesilvernutrition.com/articles/adhd-meals/" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    ADHD Meals: Easy Ways to Eat a Balanced Diet
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://for9a.com" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">for9a.com</span>
+</div>
+<a class="search-result-description" href="https://www.for9a.com/specialities/التغذية-Nutrition" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    التغذية - Nutrition
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://amenclinics.com" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">amenclinics.com</span>
+</div>
+<a class="search-result-description" href="https://www.amenclinics.com/blog/foods-that-help-with-add-the-surprising-role-diet-plays-in-symptoms/" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    Foods That Help With ADD: The Surprising Role Diet Plays in ...
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://amrhasanneuro.com" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">amrhasanneuro.com</span>
+</div>
+<a class="search-result-description" href="https://www.amrhasanneuro.com/patienteducationdetail/%D9%81%D8%B1%D8%B7%20%D8%A7%D9%84%D8%AD%D8%B1%D9%83%D8%A9%20%D9%88%20%D8%AA%D8ش%D8%AA%D8%AA%20%D8%A7%D9%84%D8%A3%D9%86%D8%AA%D8%A8%D8%A7%D9%87%20(ADHD)" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    فرط الحركة و تشتت الأنتباه (ADHD)
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://pinterest.com" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">pinterest.com</span>
+</div>
+<a class="search-result-description" href="https://www.pinterest.com/pin/food--378795018675766127/" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    Free ADHD Meal Planner Printable: The Secret to Effortless Meals
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://healthyfood.com" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">healthyfood.com</span>
+</div>
+<a class="search-result-description" href="https://www.healthyfood.com/advice/what-to-eat-if-youve-got-adhd/" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    What to eat if you've got ADHD - Healthy Food Guide
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://drnadernassef.com" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">drnadernassef.com</span>
+</div>
+<a class="search-result-description" href="https://www.drnadernassef.com/servicesdetail/%D8%A7%D9%84%D8%AA%D8%BA%D8%B0%D9%8A%D8%A9" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    التغذية العلاجية و فوائدها مع د نادر ناصف أفضل أخصائي تغذية في مصر
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://mayoclinic.org" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">mayoclinic.org</span>
+</div>
+<a class="search-result-description" href="https://www.mayoclinic.org/diseases-conditions/adhd/diagnosis-treatment/drc-20350895" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    Attention-deficit/hyperactivity disorder (ADHD) in children - ...
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://nni-egypt.org" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">nni-egypt.org</span>
+</div>
+<a class="search-result-description" href="https://nni-egypt.org/80" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    دبلومة التغذية العلاجية المعهد القومي للتغذية - NNI مصر
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://trtl.health" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">trtl.health</span>
+</div>
+<a class="search-result-description" href="https://trtl.health/ar/blogs/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/trtl-%D8%A7%D9%84%D8%B5%D8%AD%D8%A9-adhd-%D8%A7%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%AF%D9%85-%D8%A7%D9%84%D8%A3%D8%B7%D9%81%D9%84?srsltid=AfmBOormpas3YOzCjf4cLL9lPpIQgV2tiw3ASZqKT2WFn_oKbF-rLCko" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    مساعدة ADHD: اختبارات الدم لمستويات المغذيات والالتهابات | trtl.health
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://adhd.org.sa" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">adhd.org.sa</span>
+</div>
+<a class="search-result-description" href="https://adhd.org.sa/ar/%D8%A7%D8%B6%D8%B7%D8%B1%D8%A7%D8%A8-%D9%81%D8%B1%D8%B7-%D8%A7%D9%84%D8%AD%D8%B1%D9%83%D8%A9-%D9%88%D8%AA%D8%B4%D8%AA%D8%AA-%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%A8%D8%A7%D9%87/%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D8%AC/%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D8%AC-%D8%A7%D9%84%D8%AF%D9%88%D8%A7%D8%A6%D9%8A/" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    العلاج الدوائي - جمعية إشراق
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://altibbi.com" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">altibbi.com</span>
+</div>
+<a class="search-result-description" href="https://altibbi.com/%D9%85%D9%82%D8%A7%D9%84%D8%A7%D8%AA-%D8%B7%D8%A8%D9%8A%D8%A9/%D8%AA%D8%BA%D8%B2%D9%8A%D8%A9/%D8%A7%D8%B7%D8%B9%D9%85%D8%A9-%D9%85%D9%81%D9%8A%D8%AF%D8%A9-%D9%84%D8%AA%D9%82%D9%88%D9%8A%D8%A9-%D8%A7%D9%84%D8%Bذ%D8%A7%D9%83%D8%B1%D8%A9-1038" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    اطعمة مفيدة لتقوية الذاكرة | الطبي
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://homeecon.helwan.edu.eg" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">homeecon.helwan.edu.eg</span>
+</div>
+<a class="search-result-description" href="https://homeecon.helwan.edu.eg/?p=2054" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    برنامج التغذية العلاجية – نبذة عن البرنامج | كلية الإقتصاد المنزلي-جامعة حلوان
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://islamweb.net" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">islamweb.net</span>
+</div>
+<a class="search-result-description" href="https://www.islamweb.net/ar/consult/2512841/أريد-دواء-لفرط-الحركة-مع-تشتت-الانتباه" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    أريد دواء لفرط الحركة مع تشتت الانتباه
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://adhd.org.sa" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">adhd.org.sa</span>
+</div>
+<a class="search-result-description" href="https://adhd.org.sa/ar/2014/03/13/%D8%A7%D9%81%D8%AA%D8%A7-%D9%88-%D8%A7%D9%84%D8%AA%D8%BA%D8%B0%D9%8A%D8%A9/" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    افتا و التغذية - جمعية إشراق
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://gate.ahram.org.eg" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">gate.ahram.org.eg</span>
+</div>
+<a class="search-result-description" href="https://gate.ahram.org.eg/News/3004269.aspx" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    10 أطعمة تزيد الذكاء عند الأطفال واحذر ...
+                                </a>
+</div>
+<div class="search-result" style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+<div style="display: flex; align-items: center; margin-bottom: 3px;">
+<img alt="" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://altibbi.com" style="width: 16px; height: 16px; margin: auto 10px;"/>
+<span class="search-result-title" style="font-size: 14px;">altibbi.com</span>
+</div>
+<a class="search-result-description" href="https://altibbi.com/%D8%A7%D9%84%D8%A7%D8%AF%D9%88%D9%8A%D8%A9/%D9%83%D9%88%D9%86%D8%B3%D9%8A%D8%B1%D8%AA%D8%A7" rel="noreferrer noopener nofollow" style="font-size: 18px; text-decoration: none; display: block; margin: 0 0 3px 36px; font-weight: 400; line-height: 1.3;" target="_blank">
+                                    كونسيرتا CONCERTA، لعلاج فرط الحركة ونقص الانتباه | الطبي
+                                </a>
+</div>
+</div>
+<div data-slug="adhd-nutrition-management"></div></div><a class="article-date">Last updated June 19, 2025</a>
+<script>
+function detectRTL(text) {
+  // Arabic, Hebrew, and other RTL Unicode blocks
+  const rtlChars = /[\u0590-\u08FF]/g;
+  const matches = text.match(rtlChars) || [];
+  return matches.length > 100;
+}
+const isRTL = detectRTL(document.documentElement.innerHTML);
+if (isRTL) {
+  document.body.classList.add('rtl-support');
+  document.body.setAttribute('dir', 'rtl');
+}
+window.addEventListener("DOMContentLoaded", function() {
+  // Chart.js bar chart
+  if (window.Chart && document.getElementById("barCanvas")) {
+    const ctxBar = document.getElementById("barCanvas").getContext('2d');
+    new Chart(ctxBar, {
+      type: 'bar',
+      data: {
+        labels: ['بروتينات', 'أوميغا-3', 'فيتامينات ومعادن', 'حبوب كاملة', 'سكريات مكررة', 'مضافات صناعية'],
+        datasets: [{
+          label: 'أهمية في النظام الغذائي لـ ADHD (من 0-10)',
+          data: [9, 8, 7, 7, 1, 0],
+          backgroundColor: [
+            'rgba(60, 179, 113, 0.7)',
+            'rgba(60, 179, 113, 0.7)',
+            'rgba(60, 179, 113, 0.7)',
+            'rgba(60, 179, 113, 0.7)',
+            'rgba(255, 99, 132, 0.7)',
+            'rgba(255, 99, 132, 0.7)'
+          ],
+          borderColor: [
+            'rgba(60, 179, 113, 1)',
+            'rgba(60, 179, 113, 1)',
+            'rgba(60, 179, 113, 1)',
+            'rgba(60, 179, 113, 1)',
+            'rgba(255, 99, 132, 1)',
+            'rgba(255, 99, 132, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true,
+            min: 0,
+            max: 10,
+            ticks: {
+              color: '#888888'
+            }
+          },
+          x: {
+            ticks: {
+              color: '#888888'
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            labels: {
+              color: '#888888'
+            }
+          }
+        }
+      }
+    });
+  }
+  // Chart.js radar chart
+  if (window.Chart && document.getElementById("radarCanvas")) {
+    const ctxRadar = document.getElementById("radarCanvas").getContext('2d');
+    new Chart(ctxRadar, {
+      type: 'radar',
+      data: {
+        labels: ['التركيز', 'تهدئة النشاط', 'استقرار المزاج', 'نوم جيد', 'صحة الجهاز الهضمي'],
+        datasets: [
+          {
+            label: 'تأثير نظام غذائي متوازن',
+            data: [5, 4, 4, 3, 4],
+            fill: true,
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgb(54, 162, 235)',
+            pointBackgroundColor: 'rgb(54, 162, 235)',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: 'rgb(54, 162, 235)',
+            tension: 0.2
+          },
+          {
+            label: 'تأثير نظام غذائي غير متوازن',
+            data: [1, 1, 1, 2, 2],
+            fill: true,
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgb(255, 99, 132)',
+            pointBackgroundColor: 'rgb(255, 99, 132)',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: 'rgb(255, 99, 132)',
+            tension: 0.2
+          }
+        ]
+      },
+      options: {
+        maintainAspectRatio: false,
+        scales: {
+          r: {
+            beginAtZero: true,
+            min: 0,
+            max: 5,
+            angleLines: {
+              color: '#888888'
+            },
+            grid: {
+              color: '#888888'
+            },
+            pointLabels: {
+              color: '#888888',
+              font: {
+                size: 14
+              }
+            },
+            ticks: {
+              backdropColor: 'rgba(0, 0, 0, 0)',
+              color: '#888888'
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            labels: {
+              color: '#888888'
+            }
+          }
+        }
+      }
+    });
+  }
+  // Mermaid mindmap
+  if (window.mermaid) {
+    mermaid.initialize({ startOnLoad: true });
+  }
+});
+</script>
+</body>
+</html>
